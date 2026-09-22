@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JobPortal | Find Your Dream Job</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="logo">JobPortal</a>
+      <button class="mobile-menu" id="mobileMenuButton" aria-label="Menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html" id="loginNav">Login</a></li>
+        <li><a href="register.html" id="registerNav">Register</a></li>
+        <li><span class="user-badge" id="userBadge"></span></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+        <div>
+          <span class="eyebrow">The independent talent network</span>
+          <h1>Great work starts with the right opportunity.</h1>
+          <p>Find flexible roles, discover ambitious teams, and move your career forward with confidence.</p>
+          <div class="hero-actions">
+            <a href="jobs.html" class="btn btn-primary">Find Jobs</a>
+            <a href="register.html" class="btn btn-secondary">Register Now</a>
+          </div>
+        </div>
+
+        <div class="hero-box">
+          <span class="hero-badge">Built for modern careers</span>
+          <h3>Work that fits your next chapter.</h3>
+          <p>One calm place to explore meaningful roles, understand the details, and stay in control of every application.</p>
+          <ul class="feature-list">
+            <li>Verified job listings</li>
+            <li>Quick registration</li>
+            <li>Application tracking</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Job Categories</h2>
+        <div class="category-grid">
+          <div class="category-card">
+            <div class="category-icon">💻</div>
+            <h3>IT & Software</h3>
+          </div>
+          <div class="category-card">
+            <div class="category-icon">📈</div>
+            <h3>Marketing</h3>
+          </div>
+          <div class="category-card">
+            <div class="category-icon">💰</div>
+            <h3>Finance</h3>
+          </div>
+          <div class="category-card">
+            <div class="category-icon">🩺</div>
+            <h3>Healthcare</h3>
+          </div>
+          <div class="category-card">
+            <div class="category-icon">🎓</div>
+            <h3>Education</h3>
+          </div>
+          <div class="category-card">
+            <div class="category-icon">🛠️</div>
+            <h3>Engineering</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Featured Jobs</h2>
+        <div class="featured-grid" id="featuredJobs"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Statistics</h2>
+        <div class="stats-grid">
+          <div class="card">
+            <h3>Total Jobs</h3>
+            <p class="value" id="statJobs">0</p>
+          </div>
+          <div class="card">
+            <h3>Companies</h3>
+            <p class="value" id="statCompanies">0</p>
+          </div>
+          <div class="card">
+            <h3>Job Seekers</h3>
+            <p class="value" id="statSeekers">0</p>
+          </div>
+          <div class="card">
+            <h3>Applications</h3>
+            <p class="value" id="statApplications">0</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-row">
+      <div>
+        <h3>JobPortal</h3>
+        <p>Build your career with confidence.</p>
+      </div>
+      <div>
+        <p>© <span id="year"></span> JobPortal</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/jobs.js"></script>
+</body>
+</html>
