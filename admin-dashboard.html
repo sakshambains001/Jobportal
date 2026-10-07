@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JobPortal | Admin Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="admin-dashboard">
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="logo">JobPortal</a>
+      <button class="mobile-menu" id="mobileMenuButton" aria-label="Menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="admin-dashboard.html">Dashboard</a></li>
+        <li><a href="manage-users.html">Users</a></li>
+        <li><a href="manage-jobs.html">Jobs</a></li>
+        <li><a href="manage-applications.html">Applications</a></li>
+        <li><a href="#" id="logoutBtn">Logout</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="container section">
+    <div class="page-shell">
+      <aside class="sidebar">
+        <nav>
+          <a href="admin-dashboard.html" class="active">Dashboard</a>
+          <a href="manage-users.html">Users</a>
+          <a href="manage-jobs.html">Jobs</a>
+          <a href="manage-applications.html">Applications</a>
+          <a href="#" id="logoutBtnSide">Logout</a>
+        </nav>
+      </aside>
+
+      <div>
+        <div class="admin-heading-row">
+          <div>
+            <span class="eyebrow">Control center</span>
+            <h2>Admin Dashboard</h2>
+            <p class="muted-text">Monitor the marketplace and keep every account, listing, and application moving.</p>
+          </div>
+          <a href="manage-users.html" class="btn btn-primary">Manage users</a>
+        </div>
+        <div class="dashboard-grid" id="dashboardStats"></div>
+        <section class="admin-activity list-panel">
+          <div class="panel-heading">
+            <div>
+              <span class="eyebrow">Live overview</span>
+              <h3>Recent application activity</h3>
+            </div>
+            <a href="manage-applications.html" class="text-link">View all</a>
+          </div>
+          <div id="adminActivity"></div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-row">
+      <div>
+        <h3>JobPortal</h3>
+        <p>System overview and control center.</p>
+      </div>
+      <div>
+        <p>© <span id="year"></span> JobPortal</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
