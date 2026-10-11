@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JobPortal | Company Profile</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="company-profile">
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="logo">JobPortal</a>
+      <button class="mobile-menu" id="mobileMenuButton" aria-label="Menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="employer-dashboard.html">Dashboard</a></li>
+        <li><a href="post-job.html">Post Job</a></li>
+        <li><a href="manage-jobs.html">Manage Jobs</a></li>
+        <li><a href="applicants.html">Applicants</a></li>
+        <li><a href="company-profile.html">Company Profile</a></li>
+        <li><a href="#" id="logoutBtn">Logout</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="container section">
+    <div class="page-shell">
+      <aside class="sidebar">
+        <nav>
+          <a href="employer-dashboard.html">Dashboard</a>
+          <a href="post-job.html">Post Job</a>
+          <a href="manage-jobs.html">Manage Jobs</a>
+          <a href="applicants.html">Applicants</a>
+          <a href="company-profile.html" class="active">Company Profile</a>
+          <a href="#" id="logoutBtnSide">Logout</a>
+        </nav>
+      </aside>
+
+      <div class="form-wrap">
+        <h2 class="section-title">Company Profile</h2>
+        <div id="messageBox" class="message"></div>
+
+        <form id="companyForm">
+          <div class="form-grid">
+            <div class="form-group full">
+              <label for="companyName">Company Name</label>
+              <input id="companyName" type="text" required>
+            </div>
+            <div class="form-group full">
+              <label for="companyWebsite">Website</label>
+              <input id="companyWebsite" type="url" required>
+            </div>
+            <div class="form-group">
+              <label for="companyLocation">Location</label>
+              <input id="companyLocation" type="text" required>
+            </div>
+            <div class="form-group">
+              <label for="companyIndustry">Industry</label>
+              <input id="companyIndustry" type="text" required>
+            </div>
+            <div class="form-group full">
+              <label for="companyDescription">Company Description</label>
+              <textarea id="companyDescription" required></textarea>
+            </div>
+          </div>
+
+          <div class="button-row" style="margin-top: 22px;">
+            <button type="submit" class="btn btn-primary">Save Company</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-row">
+      <div>
+        <h3>JobPortal</h3>
+        <p>Build a strong company profile.</p>
+      </div>
+      <div>
+        <p>© <span id="year"></span> JobPortal</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/employer.js"></script>
+</body>
+</html>
