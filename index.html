@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JobPortal | Find Your Dream Job</title>
+  <title>HireX | Find Your Dream Job</title>
+  <link rel="icon" type="image/svg+xml" href="assets/hirex-mark.svg">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body data-page="home">
   <header class="navbar">
     <div class="container navbar-inner">
-      <a href="index.html" class="logo">JobPortal</a>
+      <a href="index.html" class="logo"><svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="hirexGradient" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2563eb"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs><rect x="1" y="1" width="38" height="38" rx="12" fill="url(#hirexGradient)"/><path d="M10 11v18m9-18v18m-9-9h9m5-8 11 16m0-16L24 28" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Hire<span class="logo-x">X</span></span></a>
       <button class="mobile-menu" id="mobileMenuButton" aria-label="Menu">☰</button>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
@@ -27,24 +28,47 @@
     <section class="hero">
       <div class="container hero-content">
         <div>
-          <span class="eyebrow">The independent talent network</span>
-          <h1>Great work starts with the right opportunity.</h1>
-          <p>Find flexible roles, discover ambitious teams, and move your career forward with confidence.</p>
-          <div class="hero-actions">
-            <a href="jobs.html" class="btn btn-primary">Find Jobs</a>
-            <a href="register.html" class="btn btn-secondary">Register Now</a>
+          <span class="eyebrow">Make your next move</span>
+          <h1>Find Your Dream Job with HireX</h1>
+          <p>Discover opportunities, connect with employers, and build your future.</p>
+          <form class="hero-search" action="jobs.html" method="get">
+            <label class="search-control">
+              <span>Role or skill</span>
+              <input type="search" name="q" placeholder="Try product designer or JavaScript" aria-label="Search by role or skill">
+            </label>
+            <label class="search-control">
+              <span>Location</span>
+              <select name="location" aria-label="Choose a location">
+                <option value="all">Anywhere</option>
+                <option value="Remote">Remote</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Chandigarh">Chandigarh</option>
+                <option value="Mohali">Mohali</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Pune">Pune</option>
+                <option value="Hyderabad">Hyderabad</option>
+              </select>
+            </label>
+            <button class="btn btn-primary" type="submit">Search jobs</button>
+          </form>
+          <div class="hero-quick-links">
+            <span>Popular:</span>
+            <a href="jobs.html?location=Remote">Remote</a>
+            <a href="jobs.html?location=Delhi">Delhi</a>
+            <a href="jobs.html?location=Chandigarh">Chandigarh</a>
           </div>
         </div>
 
-        <div class="hero-box">
-          <span class="hero-badge">Built for modern careers</span>
-          <h3>Work that fits your next chapter.</h3>
-          <p>One calm place to explore meaningful roles, understand the details, and stay in control of every application.</p>
-          <ul class="feature-list">
-            <li>Verified job listings</li>
-            <li>Quick registration</li>
-            <li>Application tracking</li>
-          </ul>
+        <div class="hero-spotlight" aria-label="Work options available">
+          <span class="spotlight-label">A better way to work</span>
+          <p class="spotlight-title">Good work.<br>More ways to do it.</p>
+          <div class="spotlight-modes">
+            <span>Remote <i>Anywhere</i></span>
+            <span>Hybrid <i>Best of both</i></span>
+            <span>On-site <i>In your city</i></span>
+          </div>
+          <a href="jobs.html" class="spotlight-link">Explore open roles <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>
@@ -53,44 +77,70 @@
       <div class="container">
         <h2 class="section-title">Job Categories</h2>
         <div class="category-grid">
-          <div class="category-card">
+          <a class="category-card" href="jobs.html?category=developer">
             <div class="category-icon">💻</div>
             <h3>IT & Software</h3>
-          </div>
-          <div class="category-card">
+          </a>
+          <a class="category-card" href="jobs.html?category=marketing">
             <div class="category-icon">📈</div>
             <h3>Marketing</h3>
-          </div>
-          <div class="category-card">
-            <div class="category-icon">💰</div>
-            <h3>Finance</h3>
-          </div>
-          <div class="category-card">
-            <div class="category-icon">🩺</div>
-            <h3>Healthcare</h3>
-          </div>
-          <div class="category-card">
-            <div class="category-icon">🎓</div>
-            <h3>Education</h3>
-          </div>
-          <div class="category-card">
+          </a>
+          <a class="category-card" href="jobs.html?category=designer">
+            <div class="category-icon">✎</div>
+            <h3>Design</h3>
+          </a>
+          <a class="category-card" href="jobs.html?category=content">
+            <div class="category-icon">▤</div>
+            <h3>Content</h3>
+          </a>
+          <a class="category-card" href="jobs.html?category=data">
+            <div class="category-icon">⌗</div>
+            <h3>Data</h3>
+          </a>
+          <a class="category-card" href="jobs.html?location=Remote">
             <div class="category-icon">🛠️</div>
-            <h3>Engineering</h3>
-          </div>
+            <h3>Remote</h3>
+          </a>
         </div>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <h2 class="section-title">Featured Jobs</h2>
+        <div class="section-heading">
+          <div><span class="eyebrow">Handpicked for you</span><h2 class="section-title">Featured opportunities</h2></div>
+          <a href="jobs.html" class="text-link">Browse all jobs <span aria-hidden="true">↗</span></a>
+        </div>
         <div class="featured-grid" id="featuredJobs"></div>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <h2 class="section-title">Statistics</h2>
+        <div class="section-heading">
+          <div><span class="eyebrow">Work from anywhere</span><h2 class="section-title">Remote opportunities</h2></div>
+          <a href="jobs.html?location=Remote" class="text-link">See remote jobs <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="featured-grid" id="remoteJobs"></div>
+      </div>
+    </section>
+
+    <section class="section why-section">
+      <div class="container why-content">
+        <div><span class="eyebrow">A clearer path forward</span><h2>Why choose HireX?</h2></div>
+        <div class="why-points">
+          <article><span>01</span><h3>Find the right fit</h3><p>Useful filters help you focus on roles that match your skills and location.</p></article>
+          <article><span>02</span><h3>Choose how you work</h3><p>Compare remote, hybrid, and on-site opportunities at a glance.</p></article>
+          <article><span>03</span><h3>Stay in control</h3><p>Save jobs, apply with confidence, and track your applications in one place.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div><span class="eyebrow">The HireX network</span><h2 class="section-title">Careers in motion</h2></div>
+        </div>
         <div class="stats-grid">
           <div class="card">
             <h3>Total Jobs</h3>
@@ -116,11 +166,11 @@
   <footer class="footer">
     <div class="container footer-row">
       <div>
-        <h3>JobPortal</h3>
+        <h3>HireX</h3>
         <p>Build your career with confidence.</p>
       </div>
       <div>
-        <p>© <span id="year"></span> JobPortal</p>
+        <p>© <span id="year"></span> HireX</p>
       </div>
     </div>
   </footer>
