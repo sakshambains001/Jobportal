@@ -1,0 +1,59 @@
+  `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HireX | Manage Applications</title>
+  <link rel="icon" type="image/svg+xml" href="assets/hirex-mark.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="manage-applications">
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="logo"><svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="hirexGradient" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2563eb"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs><rect x="1" y="1" width="38" height="38" rx="12" fill="url(#hirexGradient)"/><path d="M10 11v18m9-18v18m-9-9h9m5-8 11 16m0-16L24 28" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Hire<span class="logo-x">X</span></span></a>
+      <button class="mobile-menu" id="mobileMenuButton" aria-label="Menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="admin-dashboard.html">Dashboard</a></li>
+        <li><a href="manage-users.html">Users</a></li>
+        <li><a href="manage-jobs.html">Jobs</a></li>
+        <li><a href="manage-applications.html">Applications</a></li>
+        <li><a href="#" id="logoutBtn">Logout</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="container section">
+    <div class="page-shell">
+      <aside class="sidebar">
+        <nav>
+          <a href="admin-dashboard.html">Dashboard</a>
+          <a href="manage-users.html">Users</a>
+          <a href="manage-jobs.html">Jobs</a>
+          <a href="manage-applications.html" class="active">Applications</a>
+          <a href="#" id="logoutBtnSide">Logout</a>
+        </nav>
+      </aside>
+
+      <div class="list-panel">
+        <h2>Manage Applications</h2>
+        <div id="applicationTable"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-row">
+      <div>
+        <h3>HireX</h3>
+        <p>Review every application status.</p>
+      </div>
+      <div>
+        <p>© <span id="year"></span> HireX</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
