@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HireX | Jobs</title>
+  <link rel="icon" type="image/svg+xml" href="assets/hirex-mark.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="jobs">
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="logo"><svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="hirexGradient" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2563eb"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs><rect x="1" y="1" width="38" height="38" rx="12" fill="url(#hirexGradient)"/><path d="M10 11v18m9-18v18m-9-9h9m5-8 11 16m0-16L24 28" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Hire<span class="logo-x">X</span></span></a>
+      <button class="mobile-menu" id="mobileMenuButton" aria-label="Menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html" id="loginNav">Login</a></li>
+        <li><a href="register.html" id="registerNav">Register</a></li>
+        <li><span class="user-badge" id="userBadge"></span></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="container section">
+    <div class="jobs-heading">
+      <div>
+        <span class="eyebrow">Your next opportunity</span>
+        <h1>Find work that fits</h1>
+        <p>Explore roles across India, or filter for remote and hybrid flexibility.</p>
+      </div>
+      <p class="job-result-count" id="jobResultCount" aria-live="polite"></p>
+    </div>
+
+    <div class="job-filters">
+      <input type="search" id="searchInput" aria-label="Search jobs" placeholder="Search title, company, skills">
+      <select id="locationFilter" aria-label="Filter by location">
+        <option value="all">All locations</option>
+        <option value="Remote">Remote</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Chandigarh">Chandigarh</option>
+        <option value="Mohali">Mohali</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Bangalore">Bangalore</option>
+        <option value="Pune">Pune</option>
+        <option value="Hyderabad">Hyderabad</option>
+      </select>
+      <select id="workModeFilter" aria-label="Filter by work mode">
+        <option value="all">All work modes</option>
+        <option value="Remote">Remote</option>
+        <option value="Hybrid">Hybrid</option>
+        <option value="On-site">On-site</option>
+      </select>
+      <select id="jobTypeFilter" aria-label="Filter by job type">
+        <option value="all">All job types</option>
+        <option value="Full Time">Full Time</option>
+        <option value="Part Time">Part Time</option>
+        <option value="Contract">Contract</option>
+        <option value="Internship">Internship</option>
+      </select>
+      <select id="experienceFilter" aria-label="Filter by experience">
+        <option value="all">All experience</option>
+        <option value="Freshers">Freshers</option>
+        <option value="0-1 year">0-1 year</option>
+        <option value="0-2 years">0-2 years</option>
+        <option value="1-2 years">1-2 years</option>
+        <option value="1-3 years">1-3 years</option>
+        <option value="2-4 years">2-4 years</option>
+      </select>
+      <select id="salaryFilter" aria-label="Filter by salary">
+        <option value="all">All salaries</option>
+        <option value="low">Below ₹30k</option>
+        <option value="mid">₹30k - ₹60k</option>
+        <option value="high">Above ₹60k</option>
+      </select>
+      <select id="categoryFilter" aria-label="Filter by category">
+        <option value="all">All categories</option>
+        <option value="developer">Development</option>
+        <option value="designer">Design</option>
+        <option value="marketing">Marketing</option>
+        <option value="content">Content</option>
+        <option value="data">Data</option>
+      </select>
+      <select id="sortSelect" aria-label="Sort jobs">
+        <option value="newest">Newest</option>
+        <option value="salary-high">Salary High to Low</option>
+        <option value="salary-low">Salary Low to High</option>
+      </select>
+    </div>
+
+    <div id="jobList" class="featured-grid"></div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-row">
+      <div>
+        <h3>HireX</h3>
+        <p>Explore new opportunities.</p>
+      </div>
+      <div>
+        <p>© <span id="year"></span> HireX</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/jobs.js"></script>
+</body>
+</html>
