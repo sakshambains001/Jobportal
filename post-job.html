@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HireX | Post Job</title>
+  <link rel="icon" type="image/svg+xml" href="assets/hirex-mark.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="post-job">
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="logo"><svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="hirexGradient" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2563eb"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs><rect x="1" y="1" width="38" height="38" rx="12" fill="url(#hirexGradient)"/><path d="M10 11v18m9-18v18m-9-9h9m5-8 11 16m0-16L24 28" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Hire<span class="logo-x">X</span></span></a>
+      <button class="mobile-menu" id="mobileMenuButton" aria-label="Menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="employer-dashboard.html">Dashboard</a></li>
+        <li><a href="post-job.html">Post Job</a></li>
+        <li><a href="manage-jobs.html">Manage Jobs</a></li>
+        <li><a href="applicants.html">Applicants</a></li>
+        <li><a href="company-profile.html">Company Profile</a></li>
+        <li><a href="#" id="logoutBtn">Logout</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="container section">
+    <div class="page-shell">
+      <aside class="sidebar">
+        <nav>
+          <a href="employer-dashboard.html">Dashboard</a>
+          <a href="post-job.html" class="active">Post Job</a>
+          <a href="manage-jobs.html">Manage Jobs</a>
+          <a href="applicants.html">Applicants</a>
+          <a href="company-profile.html">Company Profile</a>
+          <a href="#" id="logoutBtnSide">Logout</a>
+        </nav>
+      </aside>
+
+      <div class="form-wrap">
+        <h2 class="section-title">Post a New Job</h2>
+        <div id="messageBox" class="message"></div>
+
+        <form id="jobPostForm">
+          <div class="form-grid">
+            <div class="form-group full">
+              <label for="jobTitle">Job Title</label>
+              <input id="jobTitle" type="text" required>
+            </div>
+            <div class="form-group">
+              <label for="companyName">Company</label>
+              <input id="companyName" type="text" required>
+            </div>
+            <div class="form-group">
+              <label for="jobLocation">Location</label>
+              <input id="jobLocation" type="text" placeholder="City or eligible region (e.g. Delhi, India)" required>
+            </div>
+            <div class="form-group">
+              <label for="jobWorkMode">Work Mode</label>
+              <select id="jobWorkMode" required>
+                <option value="On-site">On-site</option>
+                <option value="Hybrid">Hybrid</option>
+                <option value="Remote">Remote</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="jobType">Job Type</label>
+              <select id="jobType" required>
+                <option value="Full Time">Full Time</option>
+                <option value="Part Time">Part Time</option>
+                <option value="Contract">Contract</option>
+                <option value="Internship">Internship</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="jobSalary">Salary</label>
+              <input id="jobSalary" type="text" required>
+            </div>
+            <div class="form-group">
+              <label for="jobExperience">Experience</label>
+              <input id="jobExperience" type="text" required>
+            </div>
+            <div class="form-group full">
+              <label for="jobDescription">Description</label>
+              <textarea id="jobDescription" required></textarea>
+            </div>
+            <div class="form-group full">
+              <label for="jobRequirements">Requirements</label>
+              <textarea id="jobRequirements" required></textarea>
+            </div>
+            <div class="form-group full">
+              <label for="jobDeadline">Deadline</label>
+              <input id="jobDeadline" type="date" required>
+            </div>
+          </div>
+
+          <div class="button-row" style="margin-top: 22px;">
+            <button type="submit" class="btn btn-primary">Post Job</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-row">
+      <div>
+        <h3>HireX</h3>
+        <p>Hire the right talent faster.</p>
+      </div>
+      <div>
+        <p>© <span id="year"></span> HireX</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/employer.js"></script>
+</body>
+</html>
